@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="list.html">List</a></li>
+        </ul>
+    </nav>
+    <h1>Inventory Management</h1>
+
+    <!-- Product Form -->
+    <h2>Add Product</h2>
+    <form action="process-form.php" method="post">
+        <input type="text" name="productName" placeholder="Product Name" required>
+        <input type="text" name="productCategory" placeholder="Category ID" required>
+        <input type="text" name="productSupplier" placeholder="Supplier ID" required>
+        <input type="number" name="productPrice" placeholder="Price" step="0.01" required>
+        <button type="submit" name="addProduct">Add Product</button>
+    </form>
+    <form action="process-form.php" method="post">
+        <input type="number" name="productId" placeholder="Product ID to delete" required>
+        <button type="submit" name="deleteProduct">Delete Product</button>
+    </form>
+
+    <!-- Supplier Form -->
+    <h2>Add Supplier</h2>
+    <form action="process-form.php" method="post">
+        <input type="text" name="supplierName" placeholder="Supplier Name" required>
+        <input type="text" name="supplierContact" placeholder="Contact Information" required>
+        <button type="submit" name="addSupplier">Add Supplier</button>
+    </form>
+    <form action="process-form.php" method="post">
+        <input type="number" name="supplierId" placeholder="Supplier ID to delete" required>
+        <button type="submit" name="deleteSupplier">Delete Supplier</button>
+    </form>
+
+    <!-- Customer Form -->
+    <h2>Add Customer</h2>
+    <form action="process-form.php" method="post">
+        <input type="text" name="customerName" placeholder="Customer Name" required>
+        <input type="text" name="customerContact" placeholder="Customer Contact" required>
+        <button type="submit" name="addCustomer">Add Customer</button>
+    </form>
+    <form action="process-form.php" method="post">
+        <input type="number" name="customerId" placeholder="Customer ID to delete" required>
+        <button type="submit" name="deleteCustomer">Delete Customer</button>
+    </form>
+
+    <!-- Order Form -->
+    <h2>Add Order</h2>
+    <form action="process-form.php" method="post">
+        <input type="text" name="orderCustomerId" placeholder="Customer ID" required>
+        <input type="date" name="orderDate" required>
+        <button type="submit" name="addOrder">Add Order</button>
+    </form>
+    <form action="process-form.php" method="post">
+        <input type="number" name="orderId" placeholder="Order ID to delete" required>
+        <button type="submit" name="deleteOrder">Delete Order</button>
+    </form>
+
+    <!-- Category Form -->
+    <h2>Add Category</h2>
+    <form action="process-form.php" method="post">
+        <input type="text" name="categoryName" placeholder="Category Name" required>
+        <button type="submit" name="addCategory">Add Category</button>
+    </form>
+    <form action="process-form.php" method="post">
+        <input type="number" name="categoryId" placeholder="Category ID to delete" required>
+        <button type="submit" name="deleteCategory">Delete Category</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
